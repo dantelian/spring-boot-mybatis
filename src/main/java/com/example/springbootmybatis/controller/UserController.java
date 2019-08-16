@@ -1,12 +1,9 @@
 package com.example.springbootmybatis.controller;
 
-import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
 import com.example.springbootmybatis.entity.User;
 import com.example.springbootmybatis.service.IUserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
-
-import java.util.Map;
 
 @RestController
 @RequestMapping(value = "user")
