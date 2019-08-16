@@ -5,4 +5,6 @@ import com.example.springbootmybatis.entity.User;
 
 public interface IUserService extends IService<User> {
 
+    String getUserBySex(int sex);
+
 }

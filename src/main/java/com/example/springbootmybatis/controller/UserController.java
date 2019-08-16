@@ -25,14 +25,7 @@ public class UserController {
     @ResponseBody
     @RequestMapping(value = "getUserBySex")
     public String getUserBySex(int sex) {
-        QueryWrapper<User> queryWrapper = new QueryWrapper<>();
-        queryWrapper.eq("sex", sex);
-        Map<String, Object> map = userService.getMap(queryWrapper);
-        String names = "";
-
-
-
-        return names;
+        return userService.getUserBySex(sex);
     }
 
 
