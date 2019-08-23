@@ -33,7 +33,7 @@
         select <include refid="Base_Column_List"/> from sys_user
     </select>
     <select id="getPageMap" resultType="java.util.Map">
-        select id key, name value from sys_user
+        select id aa,name bb from sys_user
     </select>
 
 </mapper>

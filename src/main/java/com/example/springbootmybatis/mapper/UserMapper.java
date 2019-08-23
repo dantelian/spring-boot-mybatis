@@ -11,6 +11,6 @@ public interface UserMapper extends BaseMapper<User> {
 
     List<User> getPageList(Page<User> page);
 
-    List<Map<String,Object>> getPageMap(Page<List<Map<String,Object>>> page);
+    List<Map<String,Object>> getPageMap(Page page);
 
 }

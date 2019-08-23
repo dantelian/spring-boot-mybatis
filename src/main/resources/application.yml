@@ -34,5 +34,8 @@ mybatis-plus:
     db-column-underline: true
     #刷新mapper 调试神器
     refresh-mapper: true
+  # 打印sql语句,调试用
+  configuration:
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
 
 
