@@ -1,9 +1,10 @@
 package com.example.springbootmybatis.entity;
 
-import com.baomidou.mybatisplus.annotation.IdType;
-import com.baomidou.mybatisplus.annotation.TableField;
-import com.baomidou.mybatisplus.annotation.TableId;
-import com.baomidou.mybatisplus.annotation.TableName;
+import com.baomidou.mybatisplus.activerecord.Model;
+import com.baomidou.mybatisplus.annotations.TableField;
+import com.baomidou.mybatisplus.annotations.TableId;
+import com.baomidou.mybatisplus.annotations.TableName;
+import com.baomidou.mybatisplus.enums.IdType;
 import lombok.Data;
 import org.springframework.format.annotation.DateTimeFormat;
 
@@ -12,7 +13,7 @@ import java.util.Date;
 
 @Data
 @TableName("sys_user")
-public class User implements Serializable {
+public class User extends Model<User> {
 
     private static final long serialVersionUID = 1L;
 
@@ -89,4 +90,8 @@ public class User implements Serializable {
     @TableField("id_number")
     private String idNumber;
 
+    @Override
+    protected Serializable pkVal() {
+        return this.id;
+    }
 }

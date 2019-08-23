@@ -3,9 +3,10 @@ package com.example.springbootmybatis.controller;
 import com.example.springbootmybatis.entity.User;
 import com.example.springbootmybatis.service.IUserService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
 
-@RestController
+@Controller
 @RequestMapping(value = "user")
 public class UserController {
 
@@ -15,7 +16,7 @@ public class UserController {
     @ResponseBody
     @RequestMapping(value = "getUserById")
     public String getUserById(String id) {
-        User user = userService.getById(id);
+        User user = userService.selectById(id);
         return user.toString();
     }
 

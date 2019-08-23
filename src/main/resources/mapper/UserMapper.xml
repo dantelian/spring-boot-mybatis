@@ -29,5 +29,11 @@
 		deptid, status,
 		createtime, version,token
 	</sql>
+    <select id="getPageList" resultType="com.example.springbootmybatis.entity.User">
+        select <include refid="Base_Column_List"/> from sys_user
+    </select>
+    <select id="getPageMap" resultType="java.util.Map">
+        select id key, name value from sys_user
+    </select>
 
 </mapper>
