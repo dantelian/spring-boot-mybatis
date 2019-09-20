@@ -1,5 +1,6 @@
 package com.example.springbootmybatis.controller;
 
+import com.baomidou.mybatisplus.plugins.Page;
 import com.example.springbootmybatis.entity.User;
 import com.example.springbootmybatis.service.IUserService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -26,6 +27,10 @@ public class UserController {
         return userService.getUserBySex(sex);
     }
 
-
+    @ResponseBody
+    @RequestMapping(value = "getPageMap")
+    public Page getPageMap() {
+        return userService.getPageMap();
+    }
 
 }

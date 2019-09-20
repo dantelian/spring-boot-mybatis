@@ -16,6 +16,6 @@ public interface IUserService extends IService<User> {
 
     Page<User> getPageList();
 
-    void getPageMap();
+    Page getPageMap();
 
 }

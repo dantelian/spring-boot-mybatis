@@ -32,10 +32,16 @@ mybatis-plus:
     field-strategy: 2
     #驼峰下划线转换
     db-column-underline: true
+    #数据库大写下划线转换
+    capital-mode: true
     #刷新mapper 调试神器
     refresh-mapper: true
   # 打印sql语句,调试用
   configuration:
+    #驼峰命名
+    map-underscore-to-camel-case: true
+    #mybatis二级缓存
+    cache-enabled: false
     log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
 
 

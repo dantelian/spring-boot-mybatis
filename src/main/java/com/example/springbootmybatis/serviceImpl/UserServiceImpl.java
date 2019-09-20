@@ -59,11 +59,12 @@ public class UserServiceImpl extends ServiceImpl<UserMapper, User> implements IU
     }
 
     @Override
-    public void getPageMap() {
+    public Page getPageMap() {
         Page page = new Page<>(1,5);
         List<Map<String,Object>> list = this.baseMapper.getPageMap(page);
 
-        System.out.println("1");
+        page.setRecords(list);
+        return page;
     }
 
 }
